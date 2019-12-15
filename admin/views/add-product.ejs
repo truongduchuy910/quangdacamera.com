@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+</head>
+
+<body>
+    <% include partials/nav %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-2"><a href="#"></a>
+                <% include partials/side %>
+            </div>
+            <div class="col">
+                <h4 class="mb-3">Thêm sản phẩm mới</h4>
+                <form class="card mb-3" action="/products/add" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <h5 class="card-title">Tên</h5>
+                        <input required="required" name="name" class="border rounded w-100 pl-2 mb-3" type="text"
+                            placeholder="Tên sản phẩm">
+                        <h5 class="card-title">Giá</h5>
+                        <input required="required" name="price" class="border rounded w-100 pl-2 mb-3" type="number"
+                            placeholder="Giá thường">
+                        <h5 class="card-title">Hình ảnh</h5>
+                        <h6 class="text-muted card-subtitle mb-2">Lưu ý</h6>
+                        <p class="card-text">Bạn có thể chọn nhiều hình ảnh. Và hình ảnh đầu tiên được chọn sẽ là ảnh
+                            chính.</p>
+                        <input required="required" name="upload" class="w-100 mb-3" type="file">
+                        <button class="btn btn-sm btn-primary text-white" type="submit" role="button" href="#">Thêm sản
+                            phẩm mới</button></span>
+
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/ad.add-product.js"></script>
+</body>
+
+</html>

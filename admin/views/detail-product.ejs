@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+</head>
+
+<body>
+    <% include partials/nav %>
+    <div class="container">
+        <div class="row">
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-2"><a href="#"></a>
+                <% include partials/side %>
+            </div>
+            <div class="col">
+                <h4 class="mb-3">Cập nhật tên sản phẩm cần cập nhật</h4>
+                <form class="card mb-3" action="/ad/detail-product" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+
+                        <h5 class="card-title">Danh mục</h5>
+                        <div id="categories-box" class="mb-2">
+                            <span id="categories-item" class="badge badge-pill badge-primary mr-2">NAME <i
+                                    class="far fa-times-circle categories-remove" value="NAME"></i></span>
+                        </div>
+                        <div class="dropdown">
+                            <input class="dropdown-toggle border rounded w-100 pl-2 mb-3" id="categories-search"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                placeholder="Tìm kiếm..." />
+                            <div id="categories-search-box" class="dropdown-menu w-100"
+                                aria-labelledby="categories-search">
+
+                                <a id="categories-search-new" class=" dropdown-item bg-primary text-white" href="#"><b>
+                                        <i class="fa fa-plus-square-o mr-2"></i>Tạo mới </b>NAME</a>
+                                <a id="categories-search-item" class="dropdown-item" href="#">NAME</a>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Thương hiệu</h5>
+                        <div id="brands-box" class="mb-2">
+                            <span id="brands-item" class="badge badge-pill badge-primary mr-2">NAME <i
+                                    class="far fa-times-circle brands-remove" value="NAME"></i></span>
+                        </div>
+                        <div class="dropdown">
+                            <input class="dropdown-toggle border rounded w-100 pl-2 mb-3" id="dropdown_brands"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                placeholder="Tìm kiếm..." />
+                            <div id="brand_box" class="dropdown-menu w-100" aria-labelledby="dropdown_brands">
+
+                                <a class="brand_new_item dropdown-item bg-primary text-white" id="new_brands"
+                                    href="#"><b>
+                                        <i class="fa fa-plus-square-o mr-2"></i>Tạo mới </b>Tên danh mục</a>
+                                <a class="brand_item dropdown-item" href="#">Action</a>
+                            </div>
+                        </div>
+                        <div id="description" class="h-100 mb-3">
+                        </div>
+                        <button class="btn btn-sm btn-success text-white" type="submit" role="button" href="#">Cập nhật
+                            sản phẩm</button>
+                    </div>
+                </form>
+                <h4 class="mb-3">Cập nhật thông tin cơ bản</h4>
+                <form class="card mb-3" action="/ad/detail-product" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <h5 class="card-title">Tên</h5>
+                        <input id="name-box" required="required" class="border rounded w-100 pl-2 mb-3" type="text"
+                            placeholder="Tên sản phẩm">
+                        <h5 class="card-title">Giá</h5>
+                        <input id="price-box" required="required" class="border rounded w-100 pl-2 mb-3" type="number"
+                            placeholder="Giá thường">
+                        <h5 class="card-title">Hình ảnh</h5>
+                        <h6 class="text-muted card-subtitle mb-2">Lưu ý</h6>
+                        <p class="card-text">Bạn có thể chọn nhiều hình ảnh. Và hình ảnh đầu tiên được chọn sẽ là ảnh
+                            chính. Những hình ảnh tải lên lúc này sẽ được ghi đè lên ảnh cũ.</p>
+                        <div id="images-box" class="row">
+                            <div class="col-6 col-md-4 col-lg-3 mb-3">
+                                <img class="w-100">
+                            </div>
+                        </div>
+                        <input class="w-100 mb-3" type="file" placeholder="Giá thường">
+                        <button class="btn btn-sm btn-success text-white" type="submit" role="button" href="#">Cập nhật
+                            sản phẩm</button>
+                        </span>
+                    </div>
+                </form>
+                <h4 class="mb-3">Thêm sản phẩm mới</h4>
+                <form class="card mb-3" action="/ad/add-product" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <h5 class="card-title">Tên</h5>
+                        <input required="required" class="border rounded w-100 pl-2 mb-3" type="text"
+                            placeholder="Tên sản phẩm">
+                        <h5 class="card-title">Giá</h5>
+                        <input required="required" class="border rounded w-100 pl-2 mb-3" type="number"
+                            placeholder="Giá thường">
+
+                        <h5 class="card-title">Hình ảnh</h5>
+                        <h6 class="text-muted card-subtitle mb-2">Lưu ý</h6>
+                        <p class="card-text">Bạn có thể chọn nhiều hình ảnh. Và hình ảnh đầu tiên được chọn sẽ là ảnh
+                            chính.</p>
+                        <input required="required" class="w-100 mb-3" type="file">
+                        <button class="btn btn-sm btn-primary text-white" type="submit" role="button" href="#">Thêm sản
+                            phẩm mới</button></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="/ad/js/ad.detail-product.js"></script>
+</body>
+
+
+</html>
