@@ -10,7 +10,8 @@ module.exports = {
   fields: {
     title: {
       type: Text,
-      isRequired: true
+      isRequired: true,
+      isUnique: true
     },
     url: {
       type: Slug,
@@ -37,13 +38,14 @@ module.exports = {
       ref: "Hashtag",
       many: true
     },
-    products: {
+    product: {
       type: Relationship,
-      ref: "Product",
-      many: true
+      ref: "Product"
     }
   },
   hooks: {
     afterDelete: ({ existingItem = {} }) => fileAdapter.delete(existingItem)
-  }
+  },
+  label: "Tin tức",
+  labelField: "title"
 };

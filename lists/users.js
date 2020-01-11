@@ -34,5 +34,7 @@ module.exports = {
     create: access.userIsAdmin,
     delete: access.userIsAdmin,
     auth: true
-  }
+  },
+  label: "Tài khoản",
+  labelField: "name"
 };

@@ -4,7 +4,11 @@ module.exports = {
   fields: {
     name: {
       type: Text,
-      isRequired: true
+      isRequired: true,
+      isUnique: true
+
     }
-  }
+  },
+  label: "Thẻ",
+  labelField: "name"
 };

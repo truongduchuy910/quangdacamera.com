@@ -10,7 +10,8 @@ module.exports = {
   fields: {
     title: {
       type: Text,
-      isRequired: true
+      isRequired: true,
+      isUnique: true
     },
     url: {
       type: Slug,
@@ -40,5 +41,7 @@ module.exports = {
   },
   hooks: {
     afterDelete: ({ existingItem = {} }) => fileAdapter.delete(existingItem)
-  }
+  },
+  label: "Sản phẩm",
+  labelField: "title"
 };
