@@ -37,11 +37,11 @@ module.exports = {
     })
   ],
   configureExpress: app => {
-    // const express = require("express");
-    // const path = require("path");
+    const express = require("express");
+    const path = require("path");
     // const bodyParser = require("body-parser");
     // const logger = require("morgan");
-    //   app.use(express.static(path.join(__dirname, "public")));
+    app.use(express.static(path.join(__dirname, "public")));
     app.set("views", "./views");
     app.set("view engine", "ejs");
     app.get("/:url", (req, res) => {
