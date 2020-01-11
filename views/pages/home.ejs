@@ -584,23 +584,11 @@
                 <h6>Uy Tín</h6>
               </div>
             </div>
+            <% data.allCategories.forEach(category=>{%>
             <h3 class="text-uppercase text-danger ml-3" data-aos="fade-right">
-              Giá rẻ
+              <%=category.name%>
             </h3>
-            <h3
-              class="text-uppercase text-danger ml-3"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
-              Lắp đặt nhanh
-            </h3>
-            <h3
-              class="text-uppercase text-danger ml-3"
-              data-aos="fade-right"
-              data-aos-delay="200"
-            >
-              Hỗ trợ tức thời
-            </h3>
+            <%})%>
           </div>
         </div>
         <div class="col">
