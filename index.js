@@ -1,7 +1,6 @@
 const { Keystone } = require("@keystonejs/keystone");
 const { GraphQLApp } = require("@keystonejs/app-graphql");
 const { AdminUIApp } = require("@keystonejs/app-admin-ui");
-const { NextApp } = require("@keystonejs/app-next");
 
 const initialiseData = require("./initial-data");
 const { MongooseAdapter } = require("@keystonejs/adapter-mongoose");
@@ -34,6 +33,5 @@ module.exports = {
       enableDefaultRoute: false,
       authStrategy
     }),
-    new NextApp({ dir: "app" })
   ]
 };
