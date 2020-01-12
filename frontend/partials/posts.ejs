@@ -1,0 +1,55 @@
+<section>
+  <div id="posts-item" style="display: none;">
+    <div class="col-sm-6 item">
+      <div class="row">
+        <a href="bai-viet/URL" style="text-decoration: none;color: inherit;">
+          <div class="col-md-12 col-lg-5">
+            <img class="img-fluid" src="IMAGE" />
+          </div>
+          <div class="col">
+            <h3 class="name">TITLE<br /></h3>
+            <p class="description">DESCRIPTION<br /></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="projects-horizontal">
+    <div class="container">
+      <div class="intro">
+        <h2 class="text-center">Dự Án Đã Làm</h2>
+      </div>
+      <div class="row projects" id="posts-box"></div>
+    </div>
+  </div>
+  <script>
+    var box = $("#posts-box");
+    const item = $("#posts-item").html();
+    $.post(
+      "/api",
+      {
+        query: `query {
+          allPosts {
+              title
+              description
+              url
+              image {
+                publicUrl 
+              }
+            }
+        }`
+      },
+      (data, status, jqXHR) => {
+        data.data.allPosts.forEach(post => {
+          box.append(
+            item
+              .replace(/TITLE/g, post.title)
+              .replace(/IMAGE/g, post.image.publicUrl)
+              .replace(/DESCRIPTION/g, post.description)
+              .replace(/URL/g, post.url)
+          );
+        });
+      }
+    );
+  </script>
+</section>
