@@ -5733,82 +5733,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Categories; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "../node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "../node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apollo-link-http */ "apollo-link-http");
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(apollo_link_http__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! apollo-client */ "apollo-client");
-/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(apollo_client__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! apollo-cache-inmemory */ "apollo-cache-inmemory");
-/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @keystonejs/apollo-helpers */ "@keystonejs/apollo-helpers");
-/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "../node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules */ "./modules.js");
 
 var _jsxFileName = "/home/truongduchuy910/apps/quangdacamera.com/app/components/Categories.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
-
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-
-
-
-
-const client = new apollo_client__WEBPACK_IMPORTED_MODULE_6__["ApolloClient"]({
-  link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_5__["HttpLink"]({
-    uri: "http://localhost:3000/admin/api"
-  }),
-  cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_7__["InMemoryCache"]()
-});
 function Categories() {
-  return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_8__["ApolloProvider"], {
-    client: client,
+  return __jsx(_modules__WEBPACK_IMPORTED_MODULE_3__["Gql"], {
+    query: `
+      query {
+        allCategories {
+          name
+        }
+      }
+      `,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    id: "4015212495",
-    __self: this
-  }, "p.jsx-4015212495{color:blue;}div.jsx-4015212495{background:red;}@media (max-width:600px){div.jsx-4015212495{background:blue;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3RydW9uZ2R1Y2h1eTkxMC9hcHBzL3F1YW5nZGFjYW1lcmEuY29tL2FwcC9jb21wb25lbnRzL0NhdGVnb3JpZXMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUJrQixBQUdzQixBQUdJLEFBSUcsV0FOcEIsSUFHQSxDQUlFIiwiZmlsZSI6Ii9ob21lL3RydW9uZ2R1Y2h1eTkxMC9hcHBzL3F1YW5nZGFjYW1lcmEuY29tL2FwcC9jb21wb25lbnRzL0NhdGVnb3JpZXMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTGluayBmcm9tIFwibmV4dC9saW5rXCI7XG5pbXBvcnQgZ3FsIGZyb20gXCJncmFwaHFsLXRhZ1wiO1xuaW1wb3J0IFJlYWN0IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgSHR0cExpbmsgfSBmcm9tIFwiYXBvbGxvLWxpbmstaHR0cFwiO1xuaW1wb3J0IHsgQXBvbGxvQ2xpZW50IH0gZnJvbSBcImFwb2xsby1jbGllbnRcIjtcbmltcG9ydCB7IEluTWVtb3J5Q2FjaGUgfSBmcm9tIFwiYXBvbGxvLWNhY2hlLWlubWVtb3J5XCI7XG5pbXBvcnQgeyBBcG9sbG9Qcm92aWRlciB9IGZyb20gXCJyZWFjdC1hcG9sbG9cIjtcbmltcG9ydCB7IFF1ZXJ5LCBLZXlzdG9uZVByb3ZpZGVyIH0gZnJvbSBcIkBrZXlzdG9uZWpzL2Fwb2xsby1oZWxwZXJzXCI7XG5cbmNvbnN0IGNsaWVudCA9IG5ldyBBcG9sbG9DbGllbnQoe1xuICBsaW5rOiBuZXcgSHR0cExpbmsoeyB1cmk6IFwiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FkbWluL2FwaVwiIH0pLFxuICBjYWNoZTogbmV3IEluTWVtb3J5Q2FjaGUoKVxufSk7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIENhdGVnb3JpZXMoKSB7XG4gIHJldHVybiAoXG4gICAgPEFwb2xsb1Byb3ZpZGVyIGNsaWVudD17Y2xpZW50fT5cbiAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgcCB7XG4gICAgICAgICAgY29sb3I6IGJsdWU7XG4gICAgICAgIH1cbiAgICAgICAgZGl2IHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiByZWQ7XG4gICAgICAgIH1cbiAgICAgICAgQG1lZGlhIChtYXgtd2lkdGg6IDYwMHB4KSB7XG4gICAgICAgICAgZGl2IHtcbiAgICAgICAgICAgIGJhY2tncm91bmQ6IGJsdWU7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICBgfTwvc3R5bGU+XG5cbiAgICAgIDxLZXlzdG9uZVByb3ZpZGVyPlxuICAgICAgICA8UXVlcnlcbiAgICAgICAgICBxdWVyeT17Z3FsYFxuICAgICAgICAgICAgcXVlcnkge1xuICAgICAgICAgICAgICBhbGxDYXRlZ29yaWVzIHtcbiAgICAgICAgICAgICAgICBuYW1lXG4gICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA+XG4gICAgICAgICAgeyh7IGRhdGEgfSkgPT4gPHByZT57SlNPTi5zdHJpbmdpZnkoZGF0YSl9PC9wcmU+fVxuICAgICAgICA8L1F1ZXJ5PlxuICAgICAgPC9LZXlzdG9uZVByb3ZpZGVyPlxuICAgIDwvQXBvbGxvUHJvdmlkZXI+XG4gICk7XG59XG4iXX0= */\n/*@ sourceURL=/home/truongduchuy910/apps/quangdacamera.com/app/components/Categories.js */"), __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_9__["KeystoneProvider"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_9__["Query"], {
-    query: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a`
-            query {
-              allCategories {
-                name
-              }
-            }
-          `,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 6
     },
     __self: this
   }, ({
     data
   }) => __jsx("pre", {
-    className: "jsx-4015212495",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 15
     },
     __self: this
-  }, _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data)))));
+  }, _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data)));
 }
 
 /***/ }),
@@ -5827,62 +5785,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "../node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! apollo-link-http */ "apollo-link-http");
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(apollo_link_http__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apollo-client */ "apollo-client");
-/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(apollo_client__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! apollo-cache-inmemory */ "apollo-cache-inmemory");
-/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @keystonejs/apollo-helpers */ "@keystonejs/apollo-helpers");
-/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules */ "./modules.js");
 
 var _jsxFileName = "/home/truongduchuy910/apps/quangdacamera.com/app/components/Hashtags.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-
-
-
-
-
-const client = new apollo_client__WEBPACK_IMPORTED_MODULE_5__["ApolloClient"]({
-  link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_4__["HttpLink"]({
-    uri: "http://localhost:3000/admin/api"
-  }),
-  cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__["InMemoryCache"]()
-});
 function Hashtags() {
-  return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_7__["ApolloProvider"], {
-    client: client,
+  return __jsx(_modules__WEBPACK_IMPORTED_MODULE_3__["Gql"], {
+    query: `
+        query {
+          allHashtags {
+            name
+          }
+        }
+      `,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__["KeystoneProvider"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__["Query"], {
-    query: graphql_tag__WEBPACK_IMPORTED_MODULE_2___default.a`
-            query {
-              allHashtags {
-                name
-              }
-            }
-          `,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 6
     },
     __self: this
   }, ({
@@ -5890,10 +5813,364 @@ function Hashtags() {
   }) => __jsx("pre", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data)));
+}
+
+/***/ }),
+
+/***/ "./components/Nav.js":
+/*!***************************!*\
+  !*** ./components/Nav.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Nav; });
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/link */ "../node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules */ "./modules.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/home/truongduchuy910/apps/quangdacamera.com/app/components/Nav.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+
+function Nav() {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("nav", {
+    className: "navbar navbar-light navbar-expand-md",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "navbar-brand text-uppercase text-danger",
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "/img/73188838_2367988273517916_6391647450892861440_n.jpg",
+    style: {
+      height: "40px",
+      width: "40px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), "\xA0Qu\u1EA3ng \u0110\xE0 Camera"), __jsx("div", {
+    className: "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "col-6 col-sm-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, __jsx("h6", {
+    className: "text-danger",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, __jsx("i", {
+    className: "fa fa-map-marker mr-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }), "\u0110\u1ECBa ch\u1EC9 1"), __jsx("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }), __jsx("p", {
+    "data-aos": "fade-down",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "B\xECnh \u0110\xE0o, Th\u0103ng B\xECnh, Qu\u1EA3ng Nam", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }))), __jsx("div", {
+    className: "col-6 col-sm-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, __jsx("h6", {
+    className: "text-danger",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  }, _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data)))));
+  }, __jsx("i", {
+    className: "fa fa-map-marker mr-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }), "\u0110\u1ECBa ch\u1EC9 2"), __jsx("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }), __jsx("p", {
+    "data-aos": "fade-down",
+    "data-aos-delay": "100",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, "Thu\u1EADn An 4, Thanh Kh\xEA, Tp. \u0110\xE0 N\u1EB5ng", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }))), __jsx("div", {
+    className: "col-12 col-sm-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx("h6", {
+    className: "text-danger",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx("i", {
+    className: "fa fa-phone mr-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }), "\u0110i\u1EC7n tho\u1EA1i"), __jsx("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }), __jsx("p", {
+    "data-aos": "fade-down",
+    "data-aos-delay": "200",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, "0935.584.569", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }), "0866.453.580", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  })))))), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, `
+        .navigation-clean {
+          background: #fff;
+          padding-top: 0.75rem;
+          padding-bottom: 0.75rem;
+          color: #333;
+          border-radius: 0;
+          box-shadow: none;
+          border: none;
+          margin-bottom: 0;
+        }
+        .navigation-clean .navbar-brand {
+          font-weight: 700;
+          color: inherit;
+        }
+        .navigation-clean .navbar-brand:hover {
+          color: #222;
+        }
+        .navigation-clean.navbar-dark .navbar-brand:hover {
+          color: #f0f0f0;
+        }
+        .navigation-clean .navbar-brand img {
+          height: 100%;
+          display: inline-block;
+          margin-right: 10px;
+          width: auto;
+        }
+        .navigation-clean .navbar-toggler {
+          border-color: #ddd;
+          color: #888;
+        }
+        .navigation-clean .navbar-toggler:focus,
+        .navigation-clean .navbar-toggler:hover {
+          background: 0 0;
+        }
+        .navigation-clean.navbar-dark .navbar-toggler {
+          border-color: #555;
+          color: #eee;
+        }
+        .navigation-clean .form-inline,
+        .navigation-clean .navbar-collapse {
+          border-top-color: #ddd;
+        }
+        .navigation-clean.navbar-dark .form-inline,
+        .navigation-clean.navbar-dark .navbar-collapse {
+          border-top-color: #333;
+        }
+        .navigation-clean .navbar-nav > .active > a,
+        .navigation-clean .navbar-nav > .show > a {
+          background: 0 0;
+          box-shadow: none;
+        }
+        .navigation-clean.navbar-light .navbar-nav .nav-link.active,
+        .navigation-clean.navbar-light .navbar-nav .nav-link.active:focus,
+        .navigation-clean.navbar-light .navbar-nav .nav-link.active:hover {
+          color: #8f8f8f;
+          box-shadow: none;
+          background: 0 0;
+          pointer-events: none;
+        }
+        .navigation-clean.navbar .navbar-nav .nav-link {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+        .navigation-clean.navbar-light .navbar-nav .nav-link {
+          color: #465765;
+        }
+        .navigation-clean.navbar-light .navbar-nav .nav-link:focus,
+        .navigation-clean.navbar-light .navbar-nav .nav-link:hover {
+          color: #37434d !important;
+          background-color: transparent;
+        }
+        .navigation-clean .navbar-nav > li > .dropdown-menu {
+          margin-top: -5px;
+          box-shadow: none;
+          background-color: #fff;
+          border-radius: 2px;
+        }
+        @media (min-width: 768px) {
+          .navigation-clean {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+          .navigation-clean .navbar-nav .show .dropdown-menu {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+        }
+        @media (max-width: 767px) {
+          .navigation-clean .navbar-nav .show .dropdown-menu .dropdown-item {
+            color: #37434d;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+            line-height: 1;
+          }
+        }
+        .projects-clean .projects,
+        .projects-horizontal .projects {
+          padding-bottom: 40px;
+        }
+        .navigation-clean .dropdown-menu .dropdown-item,
+        .navigation-clean .dropdown-menu .dropdown-item:focus {
+          line-height: 2;
+          color: #37434d;
+        }
+        .navigation-clean .dropdown-menu .dropdown-item:focus,
+        .navigation-clean .dropdown-menu .dropdown-item:hover {
+          background: #eee;
+          color: inherit;
+        }
+        .navigation-clean.navbar-dark {
+          background-color: #1f2021;
+          color: #fff;
+        }
+        .navigation-clean.navbar-dark .navbar-nav a.active,
+        .navigation-clean.navbar-dark .navbar-nav a.active:focus,
+        .navigation-clean.navbar-dark .navbar-nav a.active:hover {
+          color: #8f8f8f;
+          box-shadow: none;
+          background: 0 0;
+          pointer-events: none;
+        }
+        .navigation-clean.navbar-dark .navbar-nav .nav-link {
+          color: #dfe8ee;
+        }
+        .navigation-clean.navbar-dark .navbar-nav .nav-link:focus,
+        .navigation-clean.navbar-dark .navbar-nav .nav-link:hover {
+          color: #fff;
+          background-color: transparent;
+        }
+        .navigation-clean.navbar-dark .navbar-nav > li > .dropdown-menu {
+          background-color: #1f2021;
+        }
+        .navigation-clean.navbar-dark .dropdown-menu .dropdown-item,
+        .navigation-clean.navbar-dark .dropdown-menu .dropdown-item:focus {
+          color: #f2f5f8;
+        }
+        .navigation-clean.navbar-dark .dropdown-menu .dropdown-item:focus,
+        .navigation-clean.navbar-dark .dropdown-menu .dropdown-item:hover {
+          background: #363739;
+        }
+        @media (max-width: 767px) {
+          .navigation-clean.navbar-dark
+            .navbar-nav
+            .show
+            .dropdown-menu
+            .dropdown-item {
+            color: #fff;
+          }
+        }`));
 }
 
 /***/ }),
@@ -5912,62 +6189,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "../node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules */ "./modules.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! apollo-link-http */ "apollo-link-http");
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(apollo_link_http__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apollo-client */ "apollo-client");
-/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(apollo_client__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! apollo-cache-inmemory */ "apollo-cache-inmemory");
-/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @keystonejs/apollo-helpers */ "@keystonejs/apollo-helpers");
-/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__);
 
 var _jsxFileName = "/home/truongduchuy910/apps/quangdacamera.com/app/components/Posts.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
 
-
-
-
-
-
-const client = new apollo_client__WEBPACK_IMPORTED_MODULE_5__["ApolloClient"]({
-  link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_4__["HttpLink"]({
-    uri: "http://localhost:3000/admin/api"
-  }),
-  cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__["InMemoryCache"]()
-});
 function Posts() {
-  return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_7__["ApolloProvider"], {
-    client: client,
+  return __jsx(_modules__WEBPACK_IMPORTED_MODULE_2__["Gql"], {
+    query: `
+        query {
+          allPosts {
+            title
+          }
+        }
+      `,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__["KeystoneProvider"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__["Query"], {
-    query: graphql_tag__WEBPACK_IMPORTED_MODULE_2___default.a`
-            query {
-              allPosts {
-                title
-              }
-            }
-          `,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 6
     },
     __self: this
   }, ({
@@ -5975,10 +6217,10 @@ function Posts() {
   }) => __jsx("pre", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 15
     },
     __self: this
-  }, _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data)))));
+  }, _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data)));
 }
 
 /***/ }),
@@ -5997,77 +6239,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "../node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
-/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! apollo-link-http */ "apollo-link-http");
-/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(apollo_link_http__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apollo-client */ "apollo-client");
-/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(apollo_client__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! apollo-cache-inmemory */ "apollo-cache-inmemory");
-/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @keystonejs/apollo-helpers */ "@keystonejs/apollo-helpers");
-/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules */ "./modules.js");
 
 var _jsxFileName = "/home/truongduchuy910/apps/quangdacamera.com/app/components/Products.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-
-
-
-
-
-
-const client = new apollo_client__WEBPACK_IMPORTED_MODULE_5__["ApolloClient"]({
-  link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_4__["HttpLink"]({
-    uri: "http://localhost:3000/admin/api"
-  }),
-  cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_6__["InMemoryCache"]()
-});
 function Products() {
-  return __jsx("div", {
+  return __jsx(_modules__WEBPACK_IMPORTED_MODULE_3__["Gql"], {
+    query: `
+      query {
+        allProducts {
+          title
+        }
+      }
+    `,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_9___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }), __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_7__["ApolloProvider"], {
-    client: client,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__["KeystoneProvider"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_8__["Query"], {
-    query: graphql_tag__WEBPACK_IMPORTED_MODULE_2___default.a`
-              query {
-                allProducts {
-                  title
-                }
-              }
-            `,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 6
     },
     __self: this
   }, ({
@@ -6076,11 +6268,81 @@ function Products() {
     className: "text-primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 15
     },
     __self: this
-  }, _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data))))));
+  }, _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data)));
 }
+
+/***/ }),
+
+/***/ "./modules.js":
+/*!********************!*\
+  !*** ./modules.js ***!
+  \********************/
+/*! exports provided: Gql */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Gql", function() { return Gql; });
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-link-http */ "apollo-link-http");
+/* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_link_http__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-client */ "apollo-client");
+/* harmony import */ var apollo_client__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(apollo_client__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! apollo-cache-inmemory */ "apollo-cache-inmemory");
+/* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-apollo */ "react-apollo");
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @keystonejs/apollo-helpers */ "@keystonejs/apollo-helpers");
+/* harmony import */ var _keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/home/truongduchuy910/apps/quangdacamera.com/app/modules.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+
+
+
+const client = new apollo_client__WEBPACK_IMPORTED_MODULE_3__["ApolloClient"]({
+  link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_2__["HttpLink"]({
+    uri: "/admin/api"
+  }),
+  cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_4__["InMemoryCache"]()
+});
+
+const Gql = props => {
+  if (props.query) return __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_5__["ApolloProvider"], {
+    client: client,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_6__["KeystoneProvider"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx(_keystonejs_apollo_helpers__WEBPACK_IMPORTED_MODULE_6__["Query"], {
+    query: graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+              ${props.query}
+            `,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, props.children)));
+};
+
+
 
 /***/ }),
 
@@ -6099,11 +6361,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Products__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Products */ "./components/Products.js");
 /* harmony import */ var _components_Categories__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Categories */ "./components/Categories.js");
 /* harmony import */ var _components_Hashtags__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Hashtags */ "./components/Hashtags.js");
-/* harmony import */ var _public_bootstrap_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/bootstrap/css/bootstrap.min.css */ "./public/bootstrap/css/bootstrap.min.css");
-/* harmony import */ var _public_bootstrap_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_bootstrap_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
+/* harmony import */ var _public_bootstrap_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/bootstrap/css/bootstrap.min.css */ "./public/bootstrap/css/bootstrap.min.css");
+/* harmony import */ var _public_bootstrap_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_bootstrap_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/home/truongduchuy910/apps/quangdacamera.com/app/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -6113,37 +6377,37 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }, "Data:"), __jsx(_components_Posts__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_components_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }), __jsx(_components_Products__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }), __jsx(_components_Categories__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_components_Posts__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
-  }), __jsx(_components_Hashtags__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), __jsx(_components_Products__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
+    },
+    __self: this
+  }), __jsx(_components_Categories__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }), __jsx(_components_Hashtags__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
     },
     __self: this
   }));
@@ -6229,17 +6493,6 @@ module.exports = require("graphql-tag");
 
 /***/ }),
 
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next/head");
-
-/***/ }),
-
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -6281,17 +6534,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-apollo");
-
-/***/ }),
-
-/***/ "styled-jsx/style":
-/*!***********************************!*\
-  !*** external "styled-jsx/style" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("styled-jsx/style");
 
 /***/ }),
 
