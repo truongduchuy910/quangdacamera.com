@@ -5,7 +5,8 @@ module.exports = {
     name: {
       type: Text,
       isRequired: true,
-      isUnique: true
+      isUnique: true,
+      label: "Tên danh mục"
     }
   },
   label: "Danh mục",

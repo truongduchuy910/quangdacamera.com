@@ -7,29 +7,35 @@
 
   <body>
     <% include ../partials/navigation %>
-
-    <section class="pt-5">
+    <section class="p-0">
       <div class="row w-100 p-0 m-0">
         <div
-          class="col-12 col-sm-5 col-lg-3 justify-content-center align-items-center justify-content-lg-center"
+          class="col-12 col-sm-5 col-lg-3 d-flex justify-content-center align-items-center justify-content-lg-center"
         >
-          <% include ../partials/hashtags %>
+          <% include ../partials/categories %>
         </div>
         <div class="col">
-          <div class="container">
-            <div class="intro"></div>
-            <div class="row projects mt-0">
-              <div class="col-sm-6 item">
-                <% include ../partials/post %>
-              </div>
-            </div>
-          </div>
+          <img class="w-100" src="/assets/img/LBV8721AB-L1.png" />
         </div>
       </div>
     </section>
     <div class="projects-horizontal"></div>
     <div class="projects-clean"></div>
-    <div></div>
+    <div>
+      <div class="container">
+        <div class="intro">
+          <h2 class="text-center text-danger mb-5">Sản phẩm</h2>
+        </div>
+        <% include ../partials/product %>
+      </div>
+    </div>
+    <div class="projects-horizontal">
+      <div class="container">
+        <div class="intro">
+          <h2 class="text-center text-danger my-5">Dự án</h2>
+            <% include ../partials/post %>
+      </div>
+    </div>
     <div class="footer-basic">
       <footer>
         <p class="copyright">Quảng Đà Camera © 2019</p>

@@ -18,14 +18,15 @@ const access = { userIsAdmin, userOwnsItem, userIsAdminOrOwner };
 
 module.exports = {
   fields: {
-    name: { type: Text },
+    name: { type: Text, label: "Tên hiển thị" },
     email: {
       type: Text,
       isUnique: true
     },
-    isAdmin: { type: Checkbox },
+    isAdmin: { type: Checkbox, label: "Là quản trị viên" },
     password: {
-      type: Password
+      type: Password,
+      label: "Mật khẩu"
     }
   },
   access: {

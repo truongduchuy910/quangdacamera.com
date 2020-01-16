@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <title>CameraQuangDa</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+  </head>
+
+  <body>
+    <% include ../partials/navigation %>
+    <div class="article-clean">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="intro">
+              <h1 class="text-center" id="post-title"></h1>
+              <img id="post-image" class="img-fluid" src="" />
+            </div>
+            <div id="post-content" class="text"></div>
+          </div>
+          <script>
+            $.post(
+              "/api",
+              {
+                query: `query {allPosts(where:{url: "${window.location.pathname.slice(
+                  6
+                )}"}){
+                  title
+                  image {
+                    publicUrl
+                  }
+                  description
+                  content
+                }}`
+              },
+              (data, status, jqXHR) => {
+                if (data.data.allPosts.length) {
+                  const post = data.data.allPosts[0];
+                  document.getElementById("post-title").innerText = post.title;
+                  document
+                    .getElementById("post-image")
+                    .setAttribute("src", post.image.publicUrl);
+                  var converter = new showdown.Converter();
+                  document.getElementById(
+                    "post-content"
+                  ).innerHTML = converter.makeHtml(post.content);
+                }
+              }
+            );
+          </script>
+          <div class="col-12">
+            <% include ../partials/post %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="/assets/js/script.min.js"></script>
+  </body>
+</html>

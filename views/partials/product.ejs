@@ -1,0 +1,26 @@
+<% function formatMoney(n, c, d, t) { var c = isNaN(c = Math.abs(c)) ? 2 : c, d
+= d == undefined ? "." : d, t = t == undefined ? "," : t, s = n < 0 ? "-" : "",
+i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), j = (j =
+i.length) > 3 ? j % 3 : 0; return s + (j ? i.substr(0, j) + t : "") +
+i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n -
+i).toFixed(c).slice(2) : ""); }; %>
+
+<div class="row mb-5">
+  <% if (data.allProducts) data.allProducts.forEach( p => {%>
+
+  <div class="col-md-3">
+    <a class="text-decoration-none text-dark" href="/product/<%=p.url%>">
+      <div class="card">
+        <div class="card-header p-1">
+          <img class="w-100" src="<%=p.image.publicUrl%>" />
+        </div>
+        <div class="card-body">
+          <h6 class="text-danger card-subtitle mb-2"><%=p.title%></h6>
+          <p class="card-text mb-0"><%=p.description%></p>
+          <p class="card-text mb-2"><%=formatMoney(p.cost,0)%></p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <%})%>
+</div>

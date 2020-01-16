@@ -1,0 +1,27 @@
+<div class="w-100">
+  <div class="row mb-3">
+    <div
+      class="col-6 d-flex justify-content-center align-items-center bg-dark text-white p-2"
+      data-aos="fade-right"
+    >
+      <h6>Chất Lượng</h6>
+    </div>
+    <div
+      class="col-6 d-flex d-md-flex d-lg-flex justify-content-center align-items-center align-items-md-center align-items-lg-center bg-danger text-white p-2"
+      data-aos="fade-left"
+    >
+      <h6>Uy Tín</h6>
+    </div>
+    <div class="col p-0">
+      <div class="list-group">
+        <% if (data.allCategories) data.allCategories.forEach(category => { %>
+        <a
+          href="/catalog?name=<%=category.name%>"
+          class="list-group-item list-group-item-action"
+          ><%=category.name%></a
+        >
+        <% })%>
+      </div>
+    </div>
+  </div>
+</div>

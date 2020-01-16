@@ -7,29 +7,32 @@
 
   <body>
     <% include ../partials/navigation %>
-
     <section class="pt-5">
       <div class="row w-100 p-0 m-0">
         <div
           class="col-12 col-sm-5 col-lg-3 justify-content-center align-items-center justify-content-lg-center"
         >
-          <% include ../partials/hashtags %>
+          <% include ../partials/categories %>
         </div>
         <div class="col">
           <div class="container">
-            <div class="intro"></div>
-            <div class="row projects mt-0">
-              <div class="col-sm-6 item">
-                <% include ../partials/post %>
-              </div>
+            <div class="intro">
+              <h2 class="text-success">Yêu cầu thành công!</h2>
             </div>
+            <p>
+              Tên: <span class="font-weight-bold"><%= data.Cart.name%></span>
+            </p>
+            <p>
+              Điện thoại:
+              <span class="font-weight-bold"><%= data.Cart.phone%></span>
+            </p>
+            <h4>Sản phẩm</h4>
+            <% include ../partials/product %>
           </div>
         </div>
       </div>
     </section>
-    <div class="projects-horizontal"></div>
-    <div class="projects-clean"></div>
-    <div></div>
+
     <div class="footer-basic">
       <footer>
         <p class="copyright">Quảng Đà Camera © 2019</p>

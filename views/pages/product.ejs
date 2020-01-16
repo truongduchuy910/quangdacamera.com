@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %> <%var Product= data.Product[0]; if
+    (data.Product.length) {Product = data.Product[0]}; function formatMoney(n,
+    c, d, t) { var c = isNaN(c = Math.abs(c)) ? 2 : c, d = d == undefined ? "."
+    : d, t = t == undefined ? "," : t, s = n < 0 ? "-" : "", i =
+    String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), j = (j =
+    i.length) > 3 ? j % 3 : 0; return s + (j ? i.substr(0, j) + t : "") +
+    i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n -
+    i).toFixed(c).slice(2) : ""); }; %>
+
+    <title><%= Product.title%></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+  </head>
+
+  <body>
+    <% include ../partials/navigation %>
+    <div class="article-dual-column">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div class="intro"></div>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-10 col-lg-7 offset-md-1">
+            <img class="img-fluid" src="<%= Product.image.publicUrl%>" />
+          </div>
+          <div class="col-md-10 col-lg-3 offset-lg-0">
+            <h5 class="text-danger"><%= Product.title%></h5>
+            <h6>giá: <%=formatMoney(Product.cost,0)%></h6>
+            <hr />
+            <h6>Tên</h6>
+            <form method="POST" action="/createCart">
+              <input
+                required
+                name="name"
+                class="form-control form-control-sm mb-3"
+                type="text"
+              />
+              <h6>Số điện thoại</h6>
+              <input
+                required
+                name="phone"
+                class="form-control form-control-sm mb-4"
+                type="number"
+              />
+              <input
+                name="id"
+                value="<%=Product.id%>"
+                style="display: none;"
+                adas
+              />
+              <button class="btn btn-outline-danger w-100" type="submit">
+                Yêu cầu lắp đặt
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-lg-7 offset-md-1">
+            <div id="content"></div>
+            <script>
+              $.post(
+                "/api",
+                {
+                  query: `query {allProducts(where:{url:"${window.location.pathname.slice(
+                    9
+                  )}"}){content}}`
+                },
+                (data, status, jqXHR) => {
+                  if (data.data.allProducts.length) {
+                    var converter = new showdown.Converter();
+                    var md = data.data.allProducts[0].content;
+                    console.log(md);
+                    document.getElementById(
+                      "content"
+                    ).innerHTML = converter.makeHtml(md);
+                  }
+                }
+              );
+            </script>
+          </div>
+          <div class="col-md-10 col-lg-3">
+            <div class="toc">
+              <p class="text-danger">MÔ TẢ</p>
+            </div>
+            <div>
+              <p><%= Product.description%></p>
+            </div>
+          </div>
+          <div class="col-12 offset-md-1">
+            <h3 class="my-5">Sản phẩm khác</h3>
+            <% include ../partials/product %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="/assets/js/script.min.js"></script>
+  </body>
+</html>

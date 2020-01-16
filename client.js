@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const config = require("./config");
-const PORT = config.PORT.frontend;
+const PORT = config.ClientPort;
 const app = express();
 const logger = require("morgan");
 var flash = require("connect-flash");
@@ -19,7 +19,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(session({ secret: "quangdacamera.com" }));
 app.use(flash());
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "frontend"));
-require("./frontend/api/controllers")(app);
-require("./frontend/home/controllers")(app);
+app.set("views", path.join(__dirname, "views"));
+require("./router")(app);
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));

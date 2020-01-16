@@ -5,8 +5,8 @@ module.exports = {
     name: {
       type: Text,
       isRequired: true,
-      isUnique: true
-
+      isUnique: true,
+      label: "Tên thẻ"
     }
   },
   label: "Thẻ",

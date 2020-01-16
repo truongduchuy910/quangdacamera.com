@@ -1,6 +1,7 @@
 const { Keystone } = require("@keystonejs/keystone");
 const { GraphQLApp } = require("@keystonejs/app-graphql");
 const { AdminUIApp } = require("@keystonejs/app-admin-ui");
+const { StaticApp } = require("@keystonejs/app-static");
 
 const initialiseData = require("./initial-data");
 const { MongooseAdapter } = require("@keystonejs/adapter-mongoose");
@@ -15,6 +16,7 @@ const keystone = new Keystone({
   secureCookies: false
 });
 
+keystone.createList("Cart", require("./lists/carts"));
 keystone.createList("User", require("./lists/users"));
 keystone.createList("Hashtag", require("./lists/hashtags"));
 keystone.createList("Category", require("./lists/categories"));
@@ -30,8 +32,13 @@ module.exports = {
   apps: [
     new GraphQLApp(),
     new AdminUIApp({
-      enableDefaultRoute: false,
+      enableDefaultRoute: true,
       authStrategy
     }),
+    new StaticApp({
+      path: "/",
+      src: "public",
+    //  fallback: "index.html"
+    })
   ]
 };

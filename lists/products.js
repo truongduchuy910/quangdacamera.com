@@ -1,4 +1,4 @@
-const { Text, Relationship, Slug, File } = require("@keystonejs/fields");
+const { Text, Relationship, Slug, File, Float } = require("@keystonejs/fields");
 const { Markdown } = require("@keystonejs/fields-markdown");
 const { LocalFileAdapter } = require("@keystonejs/file-adapters");
 const fileAdapter = new LocalFileAdapter({
@@ -11,15 +11,19 @@ module.exports = {
     title: {
       type: Text,
       isRequired: true,
-      isUnique: true
+      isUnique: true,
+      label: "Tên sản phẩm"
     },
     url: {
       type: Slug,
-      from: "title"
+      from: "title",
+      isUnique: true,
+      label: "Đường dẫn"
     },
     description: {
       type: Text,
-      isRequired: true
+      isRequired: true,
+      label: "Mô tả"
     },
     image: {
       type: File,
@@ -28,15 +32,23 @@ module.exports = {
       hooks: {
         beforeChange: ({ existingItem = {} }) =>
           fileAdapter.delete(existingItem)
-      }
+      },
+      label: "Hình ảnh"
+    },
+    cost: {
+      type: Float,
+      isRequired: true,
+      label: "Giá"
     },
     content: {
-      type: Markdown
+      type: Markdown,
+      label: "Nội dung chi tiết"
     },
     category: {
       type: Relationship,
       ref: "Category",
-      many: true
+      many: true,
+      label: "Danh mục"
     }
   },
   hooks: {

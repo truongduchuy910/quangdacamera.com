@@ -11,15 +11,18 @@ module.exports = {
     title: {
       type: Text,
       isRequired: true,
-      isUnique: true
+      isUnique: true,
+      label: "Tên bài viết"
     },
     url: {
       type: Slug,
-      from: "title"
+      from: "title",
+      label: "Đường dẫn"
     },
     description: {
       type: Text,
-      isRequired: true
+      isRequired: true,
+      label: "Mô tả"
     },
     image: {
       type: File,
@@ -28,19 +31,23 @@ module.exports = {
       hooks: {
         beforeChange: ({ existingItem = {} }) =>
           fileAdapter.delete(existingItem)
-      }
+      },
+      label: "Hình ảnh"
     },
     content: {
-      type: Markdown
+      type: Markdown,
+      label: "Nội dung chi tiết"
     },
     hashtag: {
       type: Relationship,
       ref: "Hashtag",
-      many: true
+      many: true,
+      label: "Thẻ bài viết"
     },
     product: {
       type: Relationship,
-      ref: "Product"
+      ref: "Product",
+      label: "Sản phẩm liên kết"
     }
   },
   hooks: {
